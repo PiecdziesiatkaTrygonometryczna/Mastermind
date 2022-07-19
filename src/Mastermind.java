@@ -139,8 +139,8 @@ public class Mastermind {
                     rounds++;
                     System.out.println("Gratulacje! Odgadłeś kod [" + computerNumbers + "] za " + moves + " razem! Wygrane rundy: " + wins + "/" + rounds + ". Wygrane z rzędu: " + winsInARow + ".");
 
-                    // Ilość wygranych łącznie
-                    int intTotalGamesWon = Integer.parseInt(currentTotalGamesWon) + wins;
+                    
+                    int intTotalGamesWon = Integer.parseInt(currentTotalGamesWon) + wins;             // Ilość wygranych łącznie
                     String totalGamesWon = String.valueOf(intTotalGamesWon);
 
                     FileWriter writer3 = new FileWriter("./files/totalgameswon.txt");
@@ -154,7 +154,7 @@ public class Mastermind {
                         FileWriter writer = new FileWriter("./files/mostgameswon.txt");
                         writer.write(mostGamesWon);
                         writer.close();
-                        System.out.println("POBI�E� SW�J NOWY REKORD W ILOŚCI ODGADNI�TYCH KOD�W W TRAKCIE JEDNEJ GRY!");
+                        System.out.println("POBIŁEŚ SWÓJ NOWY REKORD W ILOŚCI ODGADNIĘTYCH KODÓW W TRAKCIE JEDNEJ GRY!");
                     }
 
                     String highScore = Integer.toString(winsInARow);
@@ -162,7 +162,7 @@ public class Mastermind {
                         FileWriter writer = new FileWriter("./files/highscore.txt");
                         writer.write(highScore);
                         writer.close();
-                        System.out.println("POBI�E� SW�J NOWY REKORD W ILOŚCI ODGADNI�TYCH KOD�W Z RZ�DU!");
+                        System.out.println("POBIŁEŚ SWÓJ NOWY REKORD W ILOŚCI ODGADNIĘTYCH KODÓW Z RZEDU!");
                     }
                     System.out.println("Aby zakończyć, wpisz /exit");
                     break;
